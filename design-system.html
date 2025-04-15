@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charte Graphique Dreamscape</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'spin-slow': 'spin 20s linear infinite',
+            'float-slow': 'float 15s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .bg-gradient-primary {
+      background-image: linear-gradient(to right, #f97316, #db2777);
+    }
+    
+    .text-gradient-primary {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(to right, #f97316, #db2777);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <div class="p-8 max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold mb-2 text-gradient-primary">Dreamscape</h1>
+    <p class="text-xl text-gray-600 mb-8">Charte Graphique</p>
+    
+    <!-- Navigation -->
+    <nav class="mb-8">
+      <ul class="flex space-x-6 border-b pb-2">
+        <li><a href="#couleurs" class="font-medium hover:text-orange-500 transition">Couleurs</a></li>
+        <li><a href="#typographie" class="font-medium hover:text-orange-500 transition">Typographie</a></li>
+        <li><a href="#espacement" class="font-medium hover:text-orange-500 transition">Espacement</a></li>
+        <li><a href="#composants" class="font-medium hover:text-orange-500 transition">Composants</a></li>
+        <li><a href="#effets" class="font-medium hover:text-orange-500 transition">Effets Visuels</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Section Couleurs -->
+    <section id="couleurs" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6">Couleurs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="primary" data-value="Orange-Pink Gradient" data-description="Dégradé principal de l'application, utilisé pour les éléments d'accent et les CTA">
+          <div class="w-full h-24 rounded-md mb-2 bg-gradient-to-r from-orange-400 to-pink-600"></div>
+          <h3 class="font-semibold">Primaire (Dégradé)</h3>
+          <p class="text-sm text-gray-600">from-orange-400 to-pink-600</p>
+        </div>
+        <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="orange" data-value="#f97316" data-description="Couleur orange utilisée pour les accents et les éléments interactifs">
+          <div class="w-full h-24 rounded-md mb-2 bg-orange-500"></div>
+          <h3 class="font-semibold">Orange</h3>
+          <p class="text-sm text-gray-600">#f97316 / bg-orange-500</p>
+        </div>
+        <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="background" data-value="#f8fafc" data-description="Couleur de fond principale">
+          <div class="w-full h-24 rounded-md mb-2 bg-gray-50"></div>
+          <h3 class="font-semibold">Background</h3>
+          <p class="text-sm text-gray-600">#f8fafc / bg-gray-50</p>
+        </div>
+        <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="dark" data-value="#0f172a" data-description="Couleur sombre pour le texte et certains arrière-plans">
+          <div class="w-full h-24 rounded-md mb-2 bg-gray-900"></div>
+          <h3 class="font-semibold">Texte / Dark</h3>
+          <p class="text-sm text-gray-600">#0f172a / bg-gray-900</p>
+        </div>
+      </div>
+      
+      <div class="mt-8 p-6 border rounded-xl">
+        <h3 class="text-xl font-semibold mb-4">Palette Secondaire</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="blue" data-value="#3b82f6" data-description="Couleur bleue utilisée pour les informations et les indicateurs business">
+            <div class="h-16 bg-blue-500 rounded-md"></div>
+            <h3 class="font-semibold mt-2">Bleu</h3>
+            <p class="text-sm text-gray-600">#3b82f6 / bg-blue-500</p>
+          </div>
+          <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="green" data-value="#22c55e" data-description="Couleur verte utilisée pour les éléments de succès et de validation">
+            <div class="h-16 bg-green-500 rounded-md"></div>
+            <h3 class="font-semibold mt-2">Vert</h3>
+            <p class="text-sm text-gray-600">#22c55e / bg-green-500</p>
+          </div>
+          <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="purple" data-value="#a855f7" data-description="Couleur violette utilisée pour les éléments premium et les dépenses personnelles">
+            <div class="h-16 bg-purple-500 rounded-md"></div>
+            <h3 class="font-semibold mt-2">Violet</h3>
+            <p class="text-sm text-gray-600">#a855f7 / bg-purple-500</p>
+          </div>
+          <div class="p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-shadow" data-color="cyan" data-value="#06b6d4" data-description="Couleur cyan utilisée pour les éléments relatifs à l'eau et aux activités nautiques">
+            <div class="h-16 bg-cyan-500 rounded-md"></div>
+            <h3 class="font-semibold mt-2">Cyan</h3>
+            <p class="text-sm text-gray-600">#06b6d4 / bg-cyan-500</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Typographie -->
+    <section id="typographie" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6">Typographie</h2>
+      <div class="space-y-6">
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Titre H1</h3>
+          <p class="text-4xl font-bold text-gradient-primary">Titre Principal</p>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-600</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Titre H2</h3>
+          <p class="text-3xl font-semibold">Sous-titre</p>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">text-3xl font-semibold</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Titre H3</h3>
+          <p class="text-2xl font-medium">Section</p>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">text-2xl font-medium</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Titre H4</h3>
+          <p class="text-xl font-medium">Sous-section</p>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">text-xl font-medium</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Paragraphe</h3>
+          <p class="text-base text-gray-600">Texte de paragraphe standard avec une couleur grise pour améliorer la lisibilité et la hiérarchie visuelle.</p>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">text-base text-gray-600</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Petit texte</h3>
+          <p class="text-sm text-gray-500">Texte plus petit pour les détails secondaires et les métadonnées</p>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">text-sm text-gray-500</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Espacement -->
+    <section id="espacement" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6">Espacement</h2>
+      <div class="space-y-6">
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Extra Small (xs)</h3>
+          <div class="flex items-center space-x-2">
+            <div class="w-2 h-2 bg-orange-500"></div>
+            <span>0.25rem (4px)</span>
+          </div>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">p-1, m-1, gap-1</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Small (sm)</h3>
+          <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-orange-500"></div>
+            <span>0.5rem (8px)</span>
+          </div>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">p-2, m-2, gap-2</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Medium (md)</h3>
+          <div class="flex items-center space-x-2">
+            <div class="w-6 h-6 bg-orange-500"></div>
+            <span>1rem (16px)</span>
+          </div>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">p-4, m-4, gap-4</code>
+        </div>
+        <div class="p-4 border rounded-xl">
+          <h3 class="text-sm text-gray-500 mb-2">Large (lg)</h3>
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-orange-500"></div>
+            <span>1.5rem (24px)</span>
+          </div>
+          <code class="text-sm bg-gray-100 p-2 rounded mt-2 block">p-6, m-6, gap-6</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Composants -->
+    <section id="composants" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6">Composants</h2>
+      
+      <!-- Boutons -->
+      <div class="mb-8">
+        <h3 class="text-xl font-medium mb-4">Boutons</h3>
+        <div class="flex flex-wrap gap-4">
+          <button class="demo-button px-4 py-2 bg-gradient-to-r from-orange-400 to-pink-600 text-white rounded-md hover:opacity-90 transition shadow-sm" data-action="Action primaire">Bouton Primaire</button>
+          <button class="demo-button px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition shadow-sm" data-action="Action secondaire">Bouton Orange</button>
+          <button class="demo-button px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors" data-action="Action tertiaire">Bouton Tertiaire</button>
+          <button class="demo-button px-4 py-2 text-orange-500 hover:underline transition" data-action="Action texte">Bouton Texte</button>
+        </div>
+      </div>
+      
+      <!-- Cartes -->
+      <div class="mb-8">
+        <h3 class="text-xl font-medium mb-4">Cartes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Carte standard -->
+          <div class="hover-example p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <h4 class="font-medium mb-2">Carte Standard</h4>
+            <p class="text-sm text-gray-600 mb-4">Description de la carte avec quelques détails supplémentaires.</p>
+            <button class="demo-button text-sm text-orange-500 hover:underline" data-action="Voir carte standard">En savoir plus</button>
+          </div>
+          
+          <!-- Carte avec image -->
+          <div class="hover-example bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+            <div class="w-full h-48 bg-gray-200 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&q=80" 
+                alt="Destination" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div class="p-4">
+              <h4 class="font-medium mb-2">Destination</h4>
+              <p class="text-sm text-gray-600">Description de la destination</p>
+            </div>
+          </div>
+          
+          <!-- Carte de destination -->
+          <div class="hover-example relative aspect-[3/4] rounded-xl overflow-hidden group">
+            <img 
+              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80" 
+              alt="Paris" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 p-6">
+              <h4 class="text-2xl font-bold text-white mb-2">Paris</h4>
+              <p class="text-gray-300 mb-4">La ville des lumières</p>
+              <button class="demo-button bg-white/20 hover:bg-white/30 backdrop-blur-md px-4 py-2 rounded-md transition-colors text-white" data-action="Découvrir Paris">
+                Découvrir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Formulaires -->
+      <div class="mb-8">
+        <h3 class="text-xl font-medium mb-4">Éléments de formulaire</h3>
+        <div class="demo-form p-6 bg-white rounded-xl shadow-sm space-y-4 max-w-md">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Champ de texte</label>
+            <input 
+              type="text" 
+              class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20" 
+              placeholder="Placeholder"
+            >
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Menu déroulant</label>
+            <select class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500/20">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded">
+            <label class="ml-2 block text-sm text-gray-700">Case à cocher</label>
+          </div>
+          <div id="form-feedback" class="text-sm text-orange-500 opacity-0 transition-opacity"></div>
+        </div>
+      </div>
+      
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-xl font-medium mb-4">Navigation</h3>
+        <div class="p-4 bg-black/20 backdrop-blur-md rounded-xl">
+          <div class="flex items-center justify-between">
+            <div class="hover-example flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center text-white">
+                D
+              </div>
+              <span class="text-xl font-bold">Dreamscape</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="#" class="hover-example text-orange-500 font-medium">Home</a>
+              <a href="#" class="hover-example hover:text-orange-500 transition-colors">Destinations</a>
+              <a href="#" class="hover-example hover:text-orange-500 transition-colors">Experiences</a>
+              <a href="#" class="hover-example hover:text-orange-500 transition-colors">About</a>
+            </div>
+            <button class="demo-button md:hidden" data-action="Ouvrir menu">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section Effets Visuels -->
+    <section id="effets" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6">Effets Visuels</h2>
+      
+      <!-- Arrière-plans flous -->
+      <div class="mb-8">
+        <h3 class="text-xl font-medium mb-4">Backdrop Blur</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="hover-example p-6 rounded-xl bg-black/20 backdrop-blur-md text-white">
+            <h4 class="font-medium mb-2">Navigation Bar</h4>
+            <p class="text-sm opacity-80">bg-black/20 backdrop-blur-md</p>
+          </div>
+          <div class="hover-example p-6 rounded-xl bg-white/20 backdrop-blur-md text-white" style="background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80'); background-size: cover;">
+            <h4 class="font-medium mb-2">Overlay sur image</h4>
+            <p class="text-sm opacity-80">bg-white/20 backdrop-blur-md</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Animations -->
+      <div class="mb-8">
+        <h3 class="text-xl font-medium mb-4">Animations</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="hover-example p-6 rounded-xl bg-white shadow-sm">
+            <div class="w-20 h-20 mx-auto mb-4 border-2 border-orange-500 rounded-full animate-spin-slow"></div>
+            <h4 class="font-medium text-center mb-2">Rotation lente</h4>
+            <code class="text-sm bg-gray-100 p-2 rounded block">animate-spin-slow</code>
+            <button class="demo-button w-full mt-4 px-3 py-1 text-sm bg-gray-100 rounded hover:bg-gray-200 transition-colors" data-action="Contrôler animation">
+              Pause/Play
+            </button>
+          </div>
+          <div class="hover-example p-6 rounded-xl bg-white shadow-sm">
+            <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-orange-400 to-pink-600 rounded-lg animate-float-slow"></div>
+            <h4 class="font-medium text-center mb-2">Flottement</h4>
+            <code class="text-sm bg-gray-100 p-2 rounded block">animate-float-slow</code>
+            <button class="demo-button w-full mt-4 px-3 py-1 text-sm bg-gray-100 rounded hover:bg-gray-200 transition-colors" data-action="Contrôler animation">
+              Pause/Play
+            </button>
+          </div>
+          <div class="hover-example p-6 rounded-xl bg-white shadow-sm">
+            <div class="w-20 h-20 mx-auto mb-4 overflow-hidden rounded-lg group">
+              <img 
+                src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&q=80" 
+                alt="Transition" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <h4 class="font-medium text-center mb-2">Zoom au survol</h4>
+            <code class="text-sm bg-gray-100 p-2 rounded block">group-hover:scale-110</code>
+            <p class="text-xs text-center text-gray-500 mt-2">Survolez l'image pour voir l'effet</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Dégradés et Ombres -->
+      <div>
+        <h3 class="text-xl font-medium mb-4">Dégradés et Ombres</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="hover-example p-6 rounded-xl bg-gradient-to-r from-orange-400 to-pink-600 shadow-md text-white">
+            <h4 class="font-medium mb-2">Dégradé Principal</h4>
+            <p class="text-sm">bg-gradient-to-r from-orange-400 to-pink-600</p>
+            <button class="demo-button mt-4 px-3 py-1 bg-white/20 backdrop-blur-sm rounded text-sm hover:bg-white/30 transition-colors" data-action="Copier gradient">
+              Copier le code
+            </button>
+          </div>
+          <div class="hover-example p-6 rounded-xl bg-white shadow-lg">
+            <h4 class="font-medium mb-2">Ombres</h4>
+            <div class="space-y-4">
+              <div class="p-3 rounded-lg bg-white shadow-sm">shadow-sm</div>
+              <div class="p-3 rounded-lg bg-white shadow">shadow (default)</div>
+              <div class="p-3 rounded-lg bg-white shadow-md">shadow-md</div>
+              <div class="p-3 rounded-lg bg-white shadow-lg">shadow-lg</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <div id="colorModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-xl p-6 max-w-md w-full">
+      <h3 id="modalTitle" class="text-2xl font-semibold mb-4">Couleur</h3>
+      <div id="modalColor" class="w-full h-32 rounded-md mb-4"></div>
+      <p id="modalDescription" class="text-gray-600 mb-4">Description de la couleur</p>
+      <div class="flex justify-end">
+        <button id="closeModal" class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Interactivité pour les couleurs
+    document.addEventListener('DOMContentLoaded', function() {
+      const colorSwatches = document.querySelectorAll('[data-color]');
+      const modal = document.getElementById('colorModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalColor = document.getElementById('modalColor');
+      const modalDescription = document.getElementById('modalDescription');
+      const closeModal = document.getElementById('closeModal');
+      
+      // Ajouter des événements pour tous les boutons de démonstration
+      const demoButtons = document.querySelectorAll('.demo-button');
+      demoButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const actionType = this.getAttribute('data-action');
+          
+          // Gérer les boutons de contrôle d'animation
+          if (actionType === "Contrôler animation") {
+            const animation = this.closest('.hover-example').querySelector('div[class*="animate-"]');
+            if (animation) {
+              if (animation.style.animationPlayState === 'paused') {
+                animation.style.animationPlayState = 'running';
+                this.textContent = 'Pause';
+              } else {
+                animation.style.animationPlayState = 'paused';
+                this.textContent = 'Play';
+              }
+              return;
+            }
+          }
+          
+          // Gérer le bouton de copie de code
+          if (actionType === "Copier gradient") {
+            const code = "bg-gradient-to-r from-orange-400 to-pink-600";
+            navigator.clipboard.writeText(code).then(() => {
+              const originalText = this.textContent;
+              this.textContent = "Copié!";
+              setTimeout(() => {
+                this.textContent = originalText;
+              }, 2000);
+            });
+            return;
+          }
+          
+          // Créer une notification temporaire
+          const notification = document.createElement('div');
+          notification.className = 'fixed top-4 right-4 bg-white shadow-lg rounded-lg px-4 py-3 transition-opacity duration-300';
+          notification.innerHTML = `
+            <div class="flex items-center gap-2">
+              <div class="h-2 w-2 rounded-full bg-orange-500"></div>
+              <p>Action: ${actionType || 'Bouton cliqué'}</p>
+            </div>
+          `;
+          document.body.appendChild(notification);
+          
+          // Supprimer la notification après 2 secondes
+          setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => {
+              notification.remove();
+            }, 300);
+          }, 2000);
+        });
+      });
+      
+      // Interactivité pour les exemples de hover
+      const hoverExamples = document.querySelectorAll('.hover-example');
+      hoverExamples.forEach(example => {
+        const indicator = document.createElement('div');
+        indicator.className = 'text-xs text-center mt-2 text-orange-500 opacity-0 transition-opacity';
+        indicator.innerText = 'Hover actif!';
+        example.appendChild(indicator);
+        
+        example.addEventListener('mouseenter', function() {
+          indicator.style.opacity = '1';
+        });
+        
+        example.addEventListener('mouseleave', function() {
+          indicator.style.opacity = '0';
+        });
+      });
+      
+      // Interactivité pour le formulaire
+      const formInputs = document.querySelectorAll('.demo-form input, .demo-form select');
+      formInputs.forEach(input => {
+        input.addEventListener('change', function() {
+          const feedback = document.getElementById('form-feedback');
+          if (feedback) {
+            feedback.textContent = 'Valeur modifiée: ' + this.value;
+            feedback.style.opacity = '1';
+            setTimeout(() => {
+              feedback.style.opacity = '0';
+            }, 2000);
+          }
+        });
+      });
+      
+      // Interactivité des couleurs
+      colorSwatches.forEach(swatch => {
+        swatch.addEventListener('click', function() {
+          const name = this.querySelector('h3').textContent;
+          const value = this.getAttribute('data-value');
+          const description = this.getAttribute('data-description');
+          
+          modalTitle.textContent = name;
+          
+          // Récupère le premier div enfant qui contient la couleur
+          const colorDiv = this.querySelector('div:first-child');
+          
+          if (name.includes('Dégradé') || colorDiv.classList.contains('bg-gradient-to-r')) {
+            // Dégradé orange-rose
+            modalColor.style.background = 'linear-gradient(to right, #f97316, #db2777)';
+          } else if (colorDiv.classList.contains('bg-orange-500')) {
+            // Orange
+            modalColor.style.background = '#f97316';
+            modalColor.style.backgroundImage = 'none';
+          } else if (colorDiv.classList.contains('bg-gray-50')) {
+            // Background gris clair
+            modalColor.style.background = '#f8fafc';
+            modalColor.style.backgroundImage = 'none';
+          } else if (colorDiv.classList.contains('bg-gray-900')) {
+            // Texte / Dark
+            modalColor.style.background = '#0f172a';
+            modalColor.style.backgroundImage = 'none';
+          } else if (colorDiv.classList.contains('bg-blue-500')) {
+            // Bleu
+            modalColor.style.background = '#3b82f6';
+            modalColor.style.backgroundImage = 'none';
+          } else if (colorDiv.classList.contains('bg-green-500')) {
+            // Vert
+            modalColor.style.background = '#22c55e';
+            modalColor.style.backgroundImage = 'none';
+          } else if (colorDiv.classList.contains('bg-purple-500')) {
+            // Violet
+            modalColor.style.background = '#a855f7';
+            modalColor.style.backgroundImage = 'none';
+          } else if (colorDiv.classList.contains('bg-cyan-500')) {
+            // Cyan
+            modalColor.style.background = '#06b6d4';
+            modalColor.style.backgroundImage = 'none';
+          } else {
+            // Fallback
+            modalColor.style.background = value;
+            modalColor.style.backgroundImage = 'none';
+          }
+          
+          modalDescription.textContent = description;
+          modal.classList.remove('hidden');
+        });
+      });
+      
+      closeModal.addEventListener('click', function() {
+        modal.classList.add('hidden');
+      });
+      
+      // Fermer la modale en cliquant en dehors ou avec Echap
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
